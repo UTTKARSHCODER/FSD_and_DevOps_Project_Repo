@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create an Account</title>
+    <style>
+        :root {
+            --primary-color: #4f46e5;
+            --primary-hover: #4338ca;
+            --bg-color: #f3f4f6;
+            --card-bg: #ffffff;
+            --text-color: #1f2937;
+            --border-color: #d1d5db;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .register-container {
+            background-color: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            width: 100%;
+            max-width: 450px;
+            box-sizing: border-box;
+        }
+
+        h2 {
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            font-size: 1.75rem;
+            text-align: center;
+            color: var(--text-color);
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            font-size: 0.875rem;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="tel"],
+        select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            font-size: 1rem;
+            box-sizing: border-box;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 0.875rem;
+        }
+
+        .checkbox-group input {
+            width: 1rem;
+            height: 1rem;
+        }
+
+        button {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 1.25rem;
+            font-size: 0.875rem;
+        }
+
+        .login-link a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="register-container">
+        <h2>Create an Account</h2>
+        <form action="/submit-registration" method="POST">
+            
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" placeholder="John Doe" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="john@example.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="At least 8 characters" minlength="8" required>
+            </div>
+
+            <div class="form-group">
+                <label for="role">Account Type</label>
+                <select id="role" name="role">
+                    <option value="user">Standard User</option>
+                    <option value="creator">Content Creator</option>
+                    <option value="business">Business Partner</option>
+                </select>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms" style="margin-bottom: 0; font-weight: normal;">I agree to the <a href="#" style="color: #4f46e5; text-decoration: none;">Terms and Conditions</a></label>
+            </div>
+
+            <button type="submit">Register</button>
+
+            <div class="login-link">
+                Already have an account? <a href="#">Log in</a>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>
