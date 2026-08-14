@@ -1,0 +1,23 @@
+{
+  "name": "devops",
+  "version": "1.0.0",
+  "description": "",
+  "main": "java.js",
+  "scripts": {
+    "test": "cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YOGESHMAHENSAR/Devops-Learning.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YOGESHMAHENSAR/Devops-Learning/issues"
+  },
+  "homepage": "https://github.com/YOGESHMAHENSAR/Devops-Learning#readme",
+  "dependencies": {
+    "cypress": "^15.20.0",
+    "ejs": "^6.0.1"
+  }
+}
