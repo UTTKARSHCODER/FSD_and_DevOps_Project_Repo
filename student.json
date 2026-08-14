@@ -24,7 +24,7 @@
     "phone": "9998887776",
     "branch": "EE",
     "password": "Password789!",
-    "expectedValid": true
+    "expectedValid": false
   },
   {
     "testCase": "Invalid - Incorrect Phone Format",
